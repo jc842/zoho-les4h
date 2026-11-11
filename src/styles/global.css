@@ -1,0 +1,78 @@
+@import "./shiki.css";
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "tailwind-scrollbar-hide";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Typography */
+  --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  /* Accent Shades (LES4H Brand Violet/Purple) */
+  --color-accent-50: oklch(92.98% 0.035 285.7);
+  --color-accent-100: oklch(86.22% 0.07 284.83);
+  --color-accent-200: oklch(72.58% 0.146 282.13);
+  --color-accent-300: oklch(59.81% 0.221 277.36);
+  --color-accent-400: oklch(49.73% 0.283 269.85);
+  --color-accent-500: oklch(45.2% 0.313 264.05);
+  --color-accent-600: oklch(38.21% 0.265 264.05);
+  --color-accent-700: oklch(30.87% 0.214 264.05);
+  --color-accent-800: oklch(23.07% 0.16 264.05);
+  --color-accent-900: oklch(14.51% 0.101 264.05);
+  --color-accent-950: oklch(9.65% 0.067 264.05);
+
+  /* Neutral Base Shades */
+  --color-base-50: oklch(0.985 0 0);
+  --color-base-100: oklch(0.97 0 0);
+  --color-base-200: oklch(0.922 0 0);
+  --color-base-300: oklch(0.87 0 0);
+  --color-base-400: oklch(0.708 0 0);
+  --color-base-500: oklch(0.556 0 0);
+  --color-base-600: oklch(0.439 0 0);
+  --color-base-700: oklch(0.371 0 0);
+  --color-base-800: oklch(0.269 0 0);
+  --color-base-900: oklch(0.205 0 0);
+  --color-base-950: oklch(0.145 0 0);
+
+  /* Zoho Primary Colors */
+  --color-zoho-red: #ea2328;
+  --color-zoho-green: #009949;
+  --color-zoho-blue: #0076a8;
+  --color-zoho-yellow: #f8991d;
+}
+
+:root {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
+

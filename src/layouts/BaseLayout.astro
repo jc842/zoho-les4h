@@ -1,0 +1,82 @@
+---
+import "@/styles/global.css";
+import BaseHead from "@/components/fundations/head/BaseHead.astro";
+import DesktopNav from "@/components/navigation/DesktopNav.astro";
+import MobileNav from "@/components/navigation/MobileNav.astro";
+import Footer from "@/components/global/Footer.astro";
+import SalesIq from "@/components/global/SalesIq.astro";
+import WhatsAppButton from "@/components/global/WhatsAppButton.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  lang?: string;
+  image?: string;
+  schema?: object;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  lang = "fr",
+  image,
+  schema,
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      canonical={canonical}
+      lang={lang}
+      image={image}
+      schema={schema}
+    />
+  </head>
+  <body class="overflow-x-clip bg-white font-sans antialiased dark:bg-base-950 text-base-900 dark:text-base-100">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-base-900 focus:px-4 focus:py-2 focus:text-white"
+    >
+      Aller au contenu principal
+    </a>
+
+    <!-- Fixed Desktop Sidebar -->
+    <DesktopNav currentPath={currentPath} />
+
+    <!-- Main Content Area (shifted on desktop for sidebar) -->
+    <div class="lg:pl-64">
+      <MobileNav currentPath={currentPath} />
+
+      <div class="mx-auto flex min-h-svh flex-col">
+        <main id="main" class="grow">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+
+    <!-- Live Communication Floating Tools -->
+    <WhatsAppButton />
+    <SalesIq />
+
+    <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script is:inline>
+      if (window.AOS) {
+        window.AOS.init({
+          once: true,
+          duration: 600,
+          disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+        });
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zoho-les4h",
+  "compatibility_date": "2026-08-01",
+  "routes": [
+    { "pattern": "zoho.les4h.fr/*", "zone_name": "les4h.fr" }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
+

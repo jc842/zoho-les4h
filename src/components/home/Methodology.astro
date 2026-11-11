@@ -1,0 +1,98 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Audit de cadrage & Détection des gains",
+    description: "Nous analysons l'existant : fichiers Excel, logiciels en doublon, perte de temps administrative. Nous concevons la cartographie Zoho idéale et calculons votre ROI prévisionnel.",
+    timeframe: "Semaine 1"
+  },
+  {
+    step: "02",
+    title: "Paramétrage sur-mesure & Migration",
+    description: "Nettoyage, dédoublonnage et import sécurisé de vos données clients et historiques. Paramétrage des règles de TVA (8.5%), des modèles de devis/factures et des pipelines de vente.",
+    timeframe: "Semaine 2 - 3"
+  },
+  {
+    step: "03",
+    title: "Formation pratique de vos équipes",
+    description: "Ateliers ciblés par métier (commerciaux sur mobile, ADV sur la facturation, dirigeants sur les tableaux de bord). Prise en main immédiate sans jargon théorique.",
+    timeframe: "Semaine 3 - 4"
+  },
+  {
+    step: "04",
+    title: "Support direct & Optimisation continue",
+    description: "Un contact direct avec Jean-Christophe Hutin, agent Zoho depuis 12 ans. Aucun ticket anonyme envoyé à l'autre bout du monde : réactivité locale sur le fuseau UTC-4.",
+    timeframe: "En continu"
+  }
+];
+---
+
+<section id="methode" class="py-24 border-t border-base-200/80 bg-base-50/50 dark:border-base-800/80 dark:bg-base-950/50">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <span class="font-mono text-xs font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400">
+        Méthode d'intégration LES4H
+      </span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-base-950 sm:text-4xl dark:text-white">
+        Comment nous déployons Zoho dans votre entreprise
+      </h2>
+      <p class="mt-4 text-base text-base-600 dark:text-base-400">
+        Un projet logiciel ne réussit que si vos collaborateurs l'adoptent au quotidien. Notre démarche est rodée par 12 années d'expérience sur le terrain antillais.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      {steps.map((s, idx) => (
+        <div
+          class="relative flex flex-col justify-between rounded-2xl border border-base-200 bg-white p-6 shadow-sm dark:border-base-800 dark:bg-base-900"
+          data-aos="fade-up"
+          data-aos-delay={idx * 100}
+        >
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-3xl font-extrabold text-accent-600/30 dark:text-accent-400/30">
+                {s.step}
+              </span>
+              <span class="rounded-full bg-base-100 px-2.5 py-1 text-[11px] font-semibold text-base-600 dark:bg-base-800 dark:text-base-300">
+                {s.timeframe}
+              </span>
+            </div>
+
+            <h3 class="mt-5 text-base font-bold text-base-950 dark:text-white">
+              {s.title}
+            </h3>
+
+            <p class="mt-3 text-xs leading-relaxed text-base-600 dark:text-base-400">
+              {s.description}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-base-100 dark:border-base-800 flex items-center gap-1.5 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+            <span>✓ Livrable clé validé</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Guarantees box -->
+    <div class="mt-14 rounded-3xl border border-accent-200 bg-accent-50/60 p-8 dark:border-accent-900/60 dark:bg-accent-950/40 text-center max-w-4xl mx-auto" data-aos="fade-up">
+      <h3 class="text-lg font-bold text-base-950 dark:text-white">
+        Vous êtes déjà sur un autre logiciel ou sur Excel ?
+      </h3>
+      <p class="mt-2 text-sm text-base-600 dark:text-base-400 max-w-2xl mx-auto">
+        Nous assurons la transition sans rupture d'activité : récupération de vos historiques Sage, EBP, Salesforce, HubSpot ou de vos classeurs Excel avec nettoyage préalable.
+      </p>
+      <div class="mt-6">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-xl bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-accent-700 transition-colors"
+        >
+          Planifier un échange de cadrage
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+

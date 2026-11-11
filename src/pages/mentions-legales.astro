@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { LEGAL, CONTACT } from "@/config/site";
+
+const pageTitle = "Mentions Légales & Confidentialité | zoho.les4h.fr";
+const pageDesc = "Mentions légales, politique de confidentialité et conditions d'accompagnement de zoho.les4h.fr - LES4H Guadeloupe, Martinique, Caraïbes.";
+---
+
+<BaseLayout title={pageTitle} description={pageDesc} canonical="https://zoho.les4h.fr/mentions-legales/">
+  <section class="py-16 max-w-4xl mx-auto px-6 lg:px-8">
+    <h1 class="text-3xl font-extrabold text-base-950 dark:text-white">
+      Mentions Légales & Données Personnelles
+    </h1>
+
+    <div class="mt-8 prose prose-base dark:prose-invert max-w-none text-sm text-base-700 dark:text-base-300 space-y-6">
+      
+      <div>
+        <h2 class="text-lg font-bold text-base-900 dark:text-white">1. Éditeur du site</h2>
+        <p>
+          Le site <strong>zoho.les4h.fr</strong> est édité par :<br />
+          <strong>{LEGAL.raisonSociale}</strong> ({LEGAL.formeJuridique})<br />
+          SIRET : {LEGAL.siret}<br />
+          Siège social : {LEGAL.codePostal} {LEGAL.ville}, {LEGAL.pays}<br />
+          Directeur de la publication : Jean-Christophe Hutin<br />
+          Téléphone : {CONTACT.phoneDisplay}<br />
+          E-mail : {CONTACT.email}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-base-900 dark:text-white">2. Statut et partenariats</h2>
+        <p>
+          LES4H est intégrateur, consultant indépendant et agent de distribution des solutions logicielles éditées par <strong>Zoho Corporation Pvt. Ltd.</strong> depuis plus de 12 ans. Les marques et logos Zoho, Zoho One, Zoho CRM, Zoho Books et leurs déclinaisons sont la propriété exclusive de Zoho Corporation.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-base-900 dark:text-white">3. Hébergement</h2>
+        <p>
+          Le site est hébergé sur le réseau mondial hautement sécurisé de :<br />
+          <strong>Cloudflare, Inc.</strong><br />
+          101 Townsend St, San Francisco, CA 94107, États-Unis<br />
+          Site web : <a href="https://www.cloudflare.com" target="_blank" rel="noopener">www.cloudflare.com</a>
+        </p>
+      </div>
+
+      <div id="confidentialite" class="scroll-mt-20">
+        <h2 class="text-lg font-bold text-base-900 dark:text-white">4. Protection des données personnelles (RGPD)</h2>
+        <p>
+          Les données recueillies via les formulaires de diagnostic, de contact ou par le widget Zoho SalesIQ sont destinées exclusivement à LES4H afin de répondre à votre demande et d'assurer le suivi de votre projet.
+        </p>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression de vos données personnelles. Vous pouvez exercer ce droit à tout moment en écrivant à : <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-base-900 dark:text-white">5. Propriété intellectuelle</h2>
+        <p>
+          L'ensemble des contenus, textes, structures et visuels originaux présents sur ce site relèvent de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Toute reproduction totale ou partielle sans accord préalable écrit de l'éditeur est formellement interdite.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+

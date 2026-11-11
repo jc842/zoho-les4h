@@ -1,0 +1,30 @@
+{
+  "name": "zoho-les4h",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@lexingtonthemes/seo": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.0.0",
+    "astro": "^5.4.0",
+    "tailwind-scrollbar-hide": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  },
+  "overrides": {
+    "vite": "^6.2.0"
+  }
+}
+

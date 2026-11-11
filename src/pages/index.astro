@@ -1,0 +1,43 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/home/Hero.astro";
+import WhyAntilles from "@/components/home/WhyAntilles.astro";
+import ZohoOneSpotlight from "@/components/home/ZohoOneSpotlight.astro";
+import AudiencesGrid from "@/components/home/AudiencesGrid.astro";
+import ToolsCatalog from "@/components/home/ToolsCatalog.astro";
+import Methodology from "@/components/home/Methodology.astro";
+import Faq from "@/components/home/Faq.astro";
+import CtaBanner from "@/components/home/CtaBanner.astro";
+import { SITE } from "@/config/site";
+---
+
+<BaseLayout
+  title={`${SITE.title}`}
+  description={SITE.description}
+  canonical="https://zoho.les4h.fr/"
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Why Local Partner in the Antilles -->
+  <WhyAntilles />
+
+  <!-- Zoho One Star Spotlight -->
+  <ZohoOneSpotlight />
+
+  <!-- Audience Segments (By Industry) -->
+  <AudiencesGrid />
+
+  <!-- Tools Catalog (By Business Domain) -->
+  <ToolsCatalog />
+
+  <!-- Deployment Methodology -->
+  <Methodology />
+
+  <!-- Frequently Asked Questions -->
+  <Faq />
+
+  <!-- Conversion CTA Banner -->
+  <CtaBanner />
+</BaseLayout>
+

@@ -1,0 +1,292 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { CONTACT, SITE } from "@/config/site";
+
+const pageTitle = "Réserver un Diagnostic Zoho 30 min offert | LES4H Antilles";
+const pageDesc = "Échangez directement avec Jean-Christophe Hutin, agent Zoho depuis 12 ans en Guadeloupe et Martinique. Audit de vos processus et cadrage de votre projet Zoho.";
+---
+
+<BaseLayout title={pageTitle} description={pageDesc} canonical="https://zoho.les4h.fr/contact/">
+
+  <section class="py-16 lg:py-24 relative overflow-hidden">
+    <div class="pointer-events-none absolute -top-40 -right-40 size-[500px] rounded-full bg-accent-500/10 blur-3xl"></div>
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      
+      <!-- Header -->
+      <div class="max-w-3xl" data-aos="fade-up">
+        <span class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-semibold text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950 dark:text-emerald-300">
+          <span class="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Audit de cadrage · 30 minutes offertes
+        </span>
+
+        <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-base-950 sm:text-5xl dark:text-white leading-[1.15]">
+          Faisons le point sur les besoins logiciels de votre entreprise
+        </h1>
+
+        <p class="mt-5 text-lg text-base-600 dark:text-base-300 leading-relaxed">
+          Prenez rendez-vous directement dans notre agenda en ligne pour un diagnostic sans engagement. Nous analysons vos outils en place et définissons la configuration Zoho la plus rentable pour vous.
+        </p>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-12">
+        
+        <!-- Left: Booking & Form Options (Col 7) -->
+        <div class="lg:col-span-7 space-y-8" data-aos="fade-up">
+          
+          <!-- Booking Option Card -->
+          <div class="rounded-3xl border border-accent-300 bg-white p-8 dark:border-accent-900 dark:bg-base-900 shadow-md ring-1 ring-accent-500/20">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-accent-100 px-3 py-1 text-xs font-bold text-accent-800 dark:bg-accent-950 dark:text-accent-300">
+                Option 1 · Prise de RDV immédiate
+              </span>
+              <span class="text-xs text-base-400 font-mono">Fuseau UTC-4 Caraïbes</span>
+            </div>
+
+            <h2 class="mt-4 text-xl font-bold text-base-950 dark:text-white">
+              Choisissez un créneau dans l'agenda de Jean-Christophe
+            </h2>
+            <p class="mt-2 text-xs text-base-600 dark:text-base-400 leading-relaxed">
+              Un créneau de 30 minutes par visio (Google Meet ou Zoho Meeting) ou par téléphone direct.
+            </p>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a
+                href={CONTACT.bookingUrl}
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center rounded-xl bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-accent-700 transition-colors"
+              >
+                <span>Ouvrir l'agenda Zoho Bookings</span>
+                <span class="ml-2">↗</span>
+              </a>
+
+              <a
+                href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent("Bonjour Jean-Christophe, je souhaite planifier un diagnostic Zoho de 30 min.")}`}
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center justify-center rounded-xl border border-[#25D366] bg-[#25D366]/10 px-5 py-3.5 text-sm font-semibold text-[#128C7E] dark:text-[#25D366] hover:bg-[#25D366]/20 transition-colors"
+              >
+                <span>Échanger par WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Express Contact Form Card -->
+          <div class="rounded-3xl border border-base-200 bg-white p-8 dark:border-base-800 dark:bg-base-900 shadow-sm">
+            <span class="rounded-full bg-base-100 px-3 py-1 text-xs font-bold text-base-700 dark:bg-base-800 dark:text-base-300">
+              Option 2 · Formulaire express
+            </span>
+
+            <h2 class="mt-4 text-xl font-bold text-base-950 dark:text-white">
+              Décrivez votre projet en 2 minutes
+            </h2>
+            <p class="mt-1 text-xs text-base-500">
+              Nous vous recontactons sous 24h ouvrées avec un premier avis technique.
+            </p>
+
+            <form
+              action="https://crm.zoho.eu/crm/WebToLeadForm"
+              method="POST"
+              class="mt-6 space-y-4 text-xs"
+            >
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Prénom & Nom *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="ex. Marie Joseph"
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  />
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Nom de votre entreprise *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="ex. Caraïbes Distribution"
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Adresse e-mail professionnelle *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="marie@entreprise.gp"
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  />
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Téléphone (portable de préférence) *
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="0690 ... / 0696 ..."
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Territoire principal
+                  </label>
+                  <select
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  >
+                    <option value="Guadeloupe">Guadeloupe (971)</option>
+                    <option value="Martinique">Martinique (972)</option>
+                    <option value="Saint-Martin">Saint-Martin (97150)</option>
+                    <option value="Saint-Barthélemy">Saint-Barthélemy (97133)</option>
+                    <option value="Guyane">Guyane (973)</option>
+                    <option value="Autre">Autre / Caraïbes</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                    Taille de l'entreprise
+                  </label>
+                  <select
+                    class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                  >
+                    <option value="1">Indépendant / 1 personne</option>
+                    <option value="2-5">2 à 5 salariés</option>
+                    <option value="6-15">6 à 15 salariés</option>
+                    <option value="16-50">16 à 50 salariés</option>
+                    <option value="50+">Plus de 50 salariés</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                  Votre besoin prioritaire
+                </label>
+                <select
+                  class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                >
+                  <option value="zoho-one">Déployer Zoho One (ERP tout-en-un)</option>
+                  <option value="crm">Zoho CRM / Bigin (Pipeline et prospection)</option>
+                  <option value="facturation">Zoho Books (Facturation, TVA 8.5% & compta)</option>
+                  <option value="stocks">Zoho Inventory (Stocks & Import maritime)</option>
+                  <option value="migration">Remplacer nos fichiers Excel ou vieux logiciels</option>
+                  <option value="autre">Autre demande spécifique</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-base-700 dark:text-base-300 mb-1">
+                  Quelques mots sur vos outils actuels et vos attentes
+                </label>
+                <textarea
+                  rows="3"
+                  placeholder="Ex. Nous utilisons actuellement Excel pour le suivi client et un logiciel Sage vieillissant. Nous souhaitons moderniser la facturation et le suivi commercial..."
+                  class="w-full rounded-xl border border-base-300 bg-base-50 px-3.5 py-2.5 text-base-900 dark:border-base-700 dark:bg-base-950 dark:text-white focus:border-accent-500 focus:outline-hidden"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full rounded-xl bg-accent-600 py-3.5 text-center text-sm font-bold text-white shadow-md hover:bg-accent-700 transition-colors"
+              >
+                Envoyer ma demande de diagnostic
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Right: Direct Coordinates & Trust Bio (Col 5) -->
+        <div class="lg:col-span-5 space-y-6" data-aos="fade-left">
+          
+          <div class="rounded-3xl border border-base-200 bg-white p-8 dark:border-base-800 dark:bg-base-900 shadow-sm">
+            <h2 class="text-lg font-bold text-base-950 dark:text-white">
+              Coordonnées directes LES4H
+            </h2>
+            <p class="mt-1 text-xs text-base-500">
+              Interlocuteur unique · Support local UTC-4
+            </p>
+
+            <div class="mt-6 space-y-4 text-xs text-base-700 dark:text-base-300">
+              <div class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-base-100 flex items-center justify-center shrink-0 dark:bg-base-800">
+                  📞
+                </div>
+                <div>
+                  <span class="text-base-500 block">Téléphone direct</span>
+                  <a href={`tel:${CONTACT.phoneE164}`} class="font-bold text-base hover:text-accent-600 transition-colors">
+                    {CONTACT.phoneDisplay}
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-base-100 flex items-center justify-center shrink-0 dark:bg-base-800">
+                  ✉️
+                </div>
+                <div>
+                  <span class="text-base-500 block">E-mail</span>
+                  <a href={`mailto:${CONTACT.email}`} class="font-bold text-sm hover:text-accent-600 transition-colors">
+                    {CONTACT.email}
+                  </a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-base-100 flex items-center justify-center shrink-0 dark:bg-base-800">
+                  📍
+                </div>
+                <div>
+                  <span class="text-base-500 block">Territoires d'intervention</span>
+                  <span class="font-medium">Guadeloupe, Martinique, Saint-Martin, Saint-Barthélemy & Guyane</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-base-100 flex items-center justify-center shrink-0 dark:bg-base-800">
+                  🕒
+                </div>
+                <div>
+                  <span class="text-base-500 block">Horaires de disponibilité</span>
+                  <span class="font-medium">Lundi au Vendredi · 8h00 - 18h00 (Heure locale UTC-4)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Callout -->
+          <div class="rounded-3xl border border-emerald-200 bg-emerald-50/60 p-6 dark:border-emerald-900 dark:bg-emerald-950/40 text-xs">
+            <div class="flex items-center gap-2 font-bold text-emerald-900 dark:text-emerald-200 text-sm">
+              <span>✓ Pourquoi ce diagnostic est 100% offert ?</span>
+            </div>
+            <p class="mt-2 text-emerald-800 dark:text-emerald-300 leading-relaxed">
+              En 12 ans de déploiements Zoho aux Antilles, nous savons qu'un projet bien cadré dès le départ garantit 100% de réussite. Cet échange nous permet de valider ensemble que Zoho est la bonne réponse technique et financière pour votre société.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+

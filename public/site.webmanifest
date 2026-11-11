@@ -1,0 +1,9 @@
+{
+  "name": "LES4H Cyber — Jean-Christophe Hutin",
+  "short_name": "LES4H Cyber",
+  "icons": [{ "src": "/favicon.png", "sizes": "270x270", "type": "image/png" }],
+  "theme_color": "#0b0b0b",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

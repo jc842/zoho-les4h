@@ -1,0 +1,123 @@
+---
+import { ZOHO_ONE_DETAILS } from "@/data/solutions";
+
+const comparisons = [
+  { tool: "CRM & Pipeline Ventes", standardSaaS: "Salesforce / HubSpot", standardCost: "80 €/m", zohoEquivalent: "Zoho CRM & Bigin" },
+  { tool: "Comptabilité & Facturation", standardSaaS: "Sage 50 / QuickBooks", standardCost: "45 €/m", zohoEquivalent: "Zoho Books & Invoice" },
+  { tool: "Signature électronique", standardSaaS: "DocuSign / Yousign", standardCost: "25 €/m", zohoEquivalent: "Zoho Sign (eIDAS)" },
+  { tool: "Gestion de projets & chantiers", standardSaaS: "Asana / Monday.com", standardCost: "20 €/m", zohoEquivalent: "Zoho Projects" },
+  { tool: "Communication & Messagerie", standardSaaS: "Slack / Teams", standardCost: "12 €/m", zohoEquivalent: "Zoho Cliq" },
+  { tool: "E-mailing & Newsletters", standardSaaS: "Mailchimp / Brevo", standardCost: "35 €/m", zohoEquivalent: "Zoho Campaigns" },
+  { tool: "Stockage & Partage de fichiers", standardSaaS: "Dropbox Business", standardCost: "18 €/m", zohoEquivalent: "Zoho WorkDrive" },
+];
+---
+
+<section id="zoho-one" class="py-24 relative overflow-hidden">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-accent-100 px-3 py-1 text-xs font-semibold text-accent-800 dark:bg-accent-950 dark:text-accent-300">
+        <span class="size-1.5 rounded-full bg-accent-500"></span>
+        La solution reine pour les TPE & PME
+      </span>
+      <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-base-950 sm:text-5xl dark:text-white">
+        Zoho One : l'ERP tout-en-un qui remplace vos 10 abonnements
+      </h2>
+      <p class="mt-5 text-lg text-base-600 dark:text-base-300 leading-relaxed">
+        Toutes les applications indispensables pour faire tourner votre entreprise aux Antilles, interconnectées sans codage et accessibles sur une interface unique.
+      </p>
+    </div>
+
+    <!-- 4 Key Value Pillars -->
+    <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos="fade-up">
+      {ZOHO_ONE_DETAILS.keyBenefits.map((b) => (
+        <div class="rounded-2xl border border-base-200 bg-white p-6 dark:border-base-800 dark:bg-base-900 shadow-sm hover:border-accent-400/50 transition-colors">
+          <div class="size-10 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center font-bold dark:bg-accent-950/80 dark:text-accent-400">
+            ✓
+          </div>
+          <h3 class="mt-4 text-base font-bold text-base-950 dark:text-white">
+            {b.title}
+          </h3>
+          <p class="mt-2 text-xs leading-relaxed text-base-600 dark:text-base-400">
+            {b.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Comparison Table: Standard SaaS vs Zoho One -->
+    <div class="mt-16 overflow-hidden rounded-3xl border border-base-200 bg-white dark:border-base-800 dark:bg-base-900 shadow-xl" data-aos="fade-up">
+      <div class="border-b border-base-200 bg-base-50/70 p-6 dark:border-base-800 dark:bg-base-950/60 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h3 class="text-xl font-bold text-base-950 dark:text-white">
+            Calculateur de rentabilité immédiat
+          </h3>
+          <p class="text-xs text-base-500 dark:text-base-400 mt-1">
+            Comparatif des coûts réels pour une entreprise de 5 à 20 collaborateurs.
+          </p>
+        </div>
+        <div class="inline-flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3.5 py-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          <span>Économie moyenne estimée : 2 800 € / collaborateur / an</span>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-base-200 text-xs font-semibold uppercase tracking-wider text-base-500 dark:border-base-800 dark:text-base-400">
+              <th class="py-3.5 px-6">Fonction clé</th>
+              <th class="py-3.5 px-6">SaaS traditionnel habituel</th>
+              <th class="py-3.5 px-6">Coût indicatif / user</th>
+              <th class="py-3.5 px-6">Équivalent inclus dans Zoho One</th>
+              <th class="py-3.5 px-6 text-right">Statut dans Zoho One</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-base-100 dark:divide-base-800/60 text-xs">
+            {comparisons.map((c) => (
+              <tr class="hover:bg-base-50/50 dark:hover:bg-base-950/30 transition-colors">
+                <td class="py-3.5 px-6 font-semibold text-base-900 dark:text-white">{c.tool}</td>
+                <td class="py-3.5 px-6 text-base-600 dark:text-base-400">{c.standardSaaS}</td>
+                <td class="py-3.5 px-6 font-mono text-red-500 dark:text-red-400">{c.standardCost}</td>
+                <td class="py-3.5 px-6 font-semibold text-accent-700 dark:text-accent-300">{c.zohoEquivalent}</td>
+                <td class="py-3.5 px-6 text-right">
+                  <span class="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-bold text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                    INCLUS (0 € en +)
+                  </span>
+                </td>
+              </tr>
+            ))}
+            <tr class="bg-base-100/60 font-bold dark:bg-base-950/80 text-sm">
+              <td class="py-4 px-6 text-base-950 dark:text-white" colspan="2">TOTAL CUMULÉ MENSUEL ESTIMÉ</td>
+              <td class="py-4 px-6 font-mono text-red-600 dark:text-red-400">~235 € / salarié / m</td>
+              <td class="py-4 px-6 text-accent-700 dark:text-accent-300">Zoho One complet (45+ apps)</td>
+              <td class="py-4 px-6 text-right">
+                <span class="text-base font-extrabold text-emerald-600 dark:text-emerald-400 font-mono">
+                  Dès 37 € / salarié / m
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Zoho One CTAs -->
+    <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+      <a
+        href="/zoho-one"
+        class="inline-flex items-center justify-center rounded-xl bg-accent-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-accent-700 transition-colors"
+      >
+        <span>Explorer toutes les fonctionnalités de Zoho One</span>
+        <span class="ml-2">→</span>
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-xl border border-base-300 bg-transparent px-5 py-3 text-sm font-medium text-base-700 hover:bg-base-100 dark:border-base-700 dark:text-base-300 dark:hover:bg-base-800 transition-colors"
+      >
+        Demander un chiffrage personnalisé
+      </a>
+    </div>
+  </div>
+</section>
+

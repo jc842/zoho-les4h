@@ -1,0 +1,18 @@
+---
+// Zoho SalesIQ widget
+import { SALESIQ } from "@/config/site";
+---
+{SALESIQ.enabled && (
+  <>
+    <script is:inline>
+      window.$zoho = window.$zoho || {};
+      $zoho.salesiq = $zoho.salesiq || { ready: function () {} };
+    </script>
+    <script
+      id="zsiqscript"
+      src={SALESIQ.src}
+      defer
+    ></script>
+  </>
+)}
+
