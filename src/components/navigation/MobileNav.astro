@@ -28,7 +28,7 @@ const navItems = [
     <ThemeToggle />
     <a
       href="/contact"
-      class="rounded-lg bg-accent-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-accent-700 transition-colors"
+      class="rounded-full bg-emerald-700 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-emerald-800 transition-colors"
     >
       Audit 30 min
     </a>
@@ -54,16 +54,16 @@ const navItems = [
   id="mobile-menu"
   class="hidden fixed inset-x-0 top-[57px] bottom-0 z-40 bg-white/95 backdrop-blur-lg px-6 py-6 overflow-y-auto dark:bg-base-950/95 border-b border-base-200 dark:border-base-800 lg:hidden"
 >
-  <div class="mb-4 rounded-xl border border-accent-200 bg-accent-50/50 p-3 text-xs dark:border-accent-900 dark:bg-accent-950/50">
-    <span class="font-semibold text-accent-700 dark:text-accent-300">Agent Zoho · 12 ans d'expérience</span>
-    <p class="text-[11px] text-base-600 dark:text-base-400 mt-0.5">Accompagnement local en Guadeloupe, Martinique, Guyane & St-Martin.</p>
+  <div class="mb-4 rounded-2xl border border-emerald-500/20 bg-emerald-50/60 p-3 text-xs dark:border-emerald-900/40 dark:bg-emerald-950/50">
+    <span class="font-semibold text-emerald-800 dark:text-emerald-300">Agent Zoho · 12 ans d'expérience</span>
+    <p class="text-[11px] text-base-600 dark:text-base-400 mt-0.5">Accompagnement de proximité en Guadeloupe, Martinique, Guyane & St-Martin.</p>
   </div>
 
   <nav class="space-y-1.5">
     {navItems.map((item) => (
       <a
         href={item.href}
-        class="block rounded-lg px-3 py-2.5 text-base font-medium text-base-800 hover:bg-base-100 dark:text-base-200 dark:hover:bg-base-900"
+        class="block rounded-xl px-3 py-2.5 text-base font-medium text-base-800 hover:bg-base-100 dark:text-base-200 dark:hover:bg-base-900"
       >
         {item.label}
       </a>
@@ -73,13 +73,13 @@ const navItems = [
   <div class="mt-8 pt-6 border-t border-base-200 dark:border-base-800 space-y-3">
     <a
       href="/contact"
-      class="block w-full rounded-xl bg-accent-600 py-3 text-center text-sm font-semibold text-white shadow-md hover:bg-accent-700"
+      class="block w-full rounded-full bg-emerald-700 py-3 text-center text-sm font-semibold text-white shadow-md hover:bg-emerald-800"
     >
       Réserver mon Diagnostic 30 min offert
     </a>
     <a
       href={`tel:${CONTACT.phoneE164}`}
-      class="block w-full rounded-xl border border-base-300 py-3 text-center text-sm font-medium text-base-700 dark:border-base-700 dark:text-base-300"
+      class="block w-full rounded-full border border-base-300 py-3 text-center text-sm font-medium text-base-700 dark:border-base-700 dark:text-base-300"
     >
       Appeler le {CONTACT.phoneDisplay}
     </a>
@@ -101,7 +101,6 @@ const navItems = [
       iconClose.classList.toggle('hidden');
     });
 
-    // Close menu when clicking a link
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
@@ -112,4 +111,3 @@ const navItems = [
     });
   }
 </script>
-

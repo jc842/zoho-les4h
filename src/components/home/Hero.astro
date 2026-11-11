@@ -5,159 +5,126 @@ import { SITE, CONTACT } from "@/config/site";
 import { ZOHO_ONE_DETAILS } from "@/data/solutions";
 ---
 
-<section class="relative overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
-  <!-- Subtle decorative ambient gradients -->
-  <div class="pointer-events-none absolute -top-40 -right-40 size-[500px] rounded-full bg-accent-500/10 blur-3xl dark:bg-accent-600/10"></div>
-  <div class="pointer-events-none absolute top-1/2 -left-40 size-[400px] rounded-full bg-emerald-500/10 blur-3xl"></div>
+<section class="relative overflow-hidden border-b border-base-200 dark:border-base-900/60 bg-gradient-to-b from-white via-base-50/50 to-white dark:from-base-950 dark:via-base-900/30 dark:to-base-950 pt-12 pb-20 lg:pt-16 lg:pb-24">
+  <!-- Subtle ambient glow background (identical to les4h.fr) -->
+  <div class="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+    <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-emerald-500/20 to-teal-500/10 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
+  </div>
 
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-12">
       
       <!-- Left Column: Copy & Value Proposition -->
-      <div class="lg:col-span-7" data-aos="fade-up">
+      <div class="lg:col-span-7 space-y-6" data-aos="fade-up">
         
-        <!-- Status / Location Badge -->
-        <div class="inline-flex items-center gap-2 rounded-full border border-base-200 bg-base-50/80 px-3.5 py-1.5 text-xs font-medium text-base-700 backdrop-blur dark:border-base-800 dark:bg-base-900/80 dark:text-base-300">
-          <span class="size-2 rounded-full bg-emerald-500 pulse-dot"></span>
+        <!-- Status Pill Badge (Style LES4H) -->
+        <div class="inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 ring-1 ring-emerald-500/30 shadow-xs">
+          <span class="flex size-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span>Agent Certifié Zoho depuis {SITE.experienceYears} ans</span>
-          <span class="text-base-300 dark:text-base-700">•</span>
-          <span class="font-mono text-accent-600 dark:text-accent-400 font-semibold">Antilles (UTC-4)</span>
+          <span class="text-zinc-400 dark:text-zinc-600">·</span>
+          <span class="text-zinc-600 dark:text-zinc-400 font-normal">Antilles (UTC-4)</span>
         </div>
 
-        <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-base-950 sm:text-5xl lg:text-6xl dark:text-white leading-[1.12]">
-          L'écosystème <span class="bg-gradient-to-r from-accent-600 via-accent-500 to-indigo-500 bg-clip-text text-transparent">Zoho</span> taillé pour les entreprises des Antilles.
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-base-900 dark:text-white text-balance leading-[1.15]">
+          L'écosystème <span class="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Zoho</span> taillé pour les entreprises des Antilles.
         </h1>
 
-        <p class="mt-6 text-lg leading-relaxed text-base-600 dark:text-base-300">
+        <p class="text-base sm:text-lg text-base-600 dark:text-base-300 text-balance leading-relaxed">
           Finissez-en avec les logiciels éparpillés et les factures SaaS cumulées. Déployez <strong class="text-base-900 dark:text-white font-semibold">Zoho One</strong> et <strong class="text-base-900 dark:text-white font-semibold">Zoho CRM</strong> avec un partenaire local basé en Guadeloupe et Martinique, présent à vos côtés depuis 12 ans sans décalage horaire.
         </p>
 
         <!-- Bullet Highlights -->
-        <ul class="mt-6 space-y-2.5 text-sm text-base-600 dark:text-base-300">
+        <ul class="space-y-2.5 text-sm text-base-600 dark:text-base-300">
           <li class="flex items-center gap-2.5">
-            <svg class="size-4.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="size-4.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
             </svg>
             <span><strong>Zoho One :</strong> 45+ applications métier unifiées pour 37 € / mois / employé.</span>
           </li>
           <li class="flex items-center gap-2.5">
-            <svg class="size-4.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="size-4.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
             </svg>
             <span><strong>Conformité locale :</strong> Paramétrage TVA 8.5%, exonérations Guyane/St-Martin et Octroi de mer.</span>
           </li>
           <li class="flex items-center gap-2.5">
-            <svg class="size-4.5 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="size-4.5 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
             </svg>
             <span><strong>Accompagnement de A à Z :</strong> Migration données (Excel, Sage), formation et support direct.</span>
           </li>
         </ul>
 
-        <!-- Action CTAs -->
-        <div class="mt-8 flex flex-wrap items-center gap-4">
+        <!-- Action CTAs (Exact LES4H Pill Styling) -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
           <a
             href="/contact"
-            class="inline-flex items-center justify-center rounded-xl bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-accent-600/20 hover:bg-accent-700 hover:shadow-accent-600/30 transition-all duration-200"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-base-900 hover:bg-black dark:bg-white dark:text-base-950 dark:hover:bg-zinc-200 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02] text-center"
           >
             <span>Réserver un diagnostic 30 min offert</span>
-            <svg class="ml-2 size-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg class="size-4 shrink-0" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
             </svg>
           </a>
 
           <a
             href="/zoho-one"
-            class="inline-flex items-center justify-center rounded-xl border border-base-300 bg-white/60 px-5 py-3.5 text-sm font-medium text-base-800 backdrop-blur hover:bg-base-100 dark:border-base-700 dark:bg-base-900/60 dark:text-base-200 dark:hover:bg-base-800 transition-colors"
+            class="inline-flex items-center justify-center gap-2 rounded-full border border-base-300 dark:border-base-800 bg-white/80 dark:bg-base-900/60 hover:bg-base-100 dark:hover:bg-base-800 px-6 py-3.5 text-sm font-medium text-base-900 dark:text-white transition duration-200 text-center"
           >
-            Découvrir Zoho One en détail
+            <span>Découvrir Zoho One en détail</span>
           </a>
         </div>
 
-        <!-- Micro Social Proof -->
-        <div class="mt-8 flex items-center gap-6 pt-6 border-t border-base-200/80 dark:border-base-800/80">
-          <div class="flex items-center gap-1.5 text-amber-500">
-            {Array.from({ length: 5 }).map(() => (
-              <svg class="size-4 fill-current" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
+        <!-- Trust Stats Strip (Style LES4H) -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-base-200 dark:border-base-800/80">
+          <div>
+            <div class="text-2xl font-bold text-base-900 dark:text-white">12 ans</div>
+            <div class="text-xs text-base-500 dark:text-base-400">Agent certifié Zoho</div>
           </div>
-          <p class="text-xs text-base-500 dark:text-base-400">
-            <strong class="font-semibold text-base-900 dark:text-white">12 ans de pratique terrain</strong> · Plus de 50 entreprises accompagnées aux Antilles
-          </p>
-        </div>
-      </div>
-
-      <!-- Right Column: Visual Card / Local Expert Card -->
-      <div class="lg:col-span-5" data-aos="fade-left">
-        <div class="relative mx-auto max-w-md lg:max-w-none">
-          
-          <!-- Outer border card with glassmorphism -->
-          <div class="relative overflow-hidden rounded-3xl border border-base-200 bg-white/70 p-6 shadow-2xl backdrop-blur-xl dark:border-base-800 dark:bg-base-900/70">
-            
-            <!-- Expert Bio & Photo -->
-            <div class="flex items-center gap-4">
-              <div class="relative size-20 shrink-0 overflow-hidden rounded-2xl border-2 border-accent-500/30">
-                <Image
-                  src={portrait}
-                  alt="Jean-Christophe Hutin - Agent Zoho Antilles"
-                  width={160}
-                  height={160}
-                  class="size-full object-cover"
-                />
-              </div>
-              <div>
-                <h3 class="text-base font-bold text-base-950 dark:text-white">
-                  Jean-Christophe Hutin
-                </h3>
-                <p class="text-xs font-medium text-accent-600 dark:text-accent-400">
-                  Agent Zoho & Fondateur LES4H
-                </p>
-                <div class="mt-1 flex items-center gap-1.5 text-xs text-base-500">
-                  <svg class="size-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
-                  <span>Basé en Guadeloupe · Présent en Martinique</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quote badge -->
-            <div class="mt-5 rounded-2xl bg-base-100 p-4 text-xs italic text-base-700 dark:bg-base-800/60 dark:text-base-300 leading-relaxed border border-base-200/50 dark:border-base-700/50">
-              « Zoho One est la suite la plus rentable jamais conçue pour une PME. Aux Antilles, elle permet de remplacer 10 abonnements coûteux par un système unique, synchronisé et totalement conforme. »
-            </div>
-
-            <!-- Key Figures -->
-            <div class="mt-6 grid grid-cols-2 gap-3">
-              {ZOHO_ONE_DETAILS.stats.map((stat) => (
-                <div class="rounded-xl border border-base-200/80 bg-base-50/80 p-3 text-center dark:border-base-800/80 dark:bg-base-950/60">
-                  <div class="text-xl font-extrabold text-accent-600 dark:text-accent-400">
-                    {stat.value}
-                  </div>
-                  <div class="mt-0.5 text-[11px] font-medium text-base-500 dark:text-base-400 leading-tight">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <!-- Quick Direct Access Links -->
-            <div class="mt-6 pt-5 border-t border-base-200 dark:border-base-800 flex items-center justify-between text-xs">
-              <span class="text-base-500">Besoin d'un avis rapide ?</span>
-              <a
-                href={`tel:${CONTACT.phoneE164}`}
-                class="font-semibold text-accent-600 dark:text-accent-400 hover:underline flex items-center gap-1"
-              >
-                <span>{CONTACT.phoneDisplay}</span>
-                <span>→</span>
-              </a>
-            </div>
+          <div>
+            <div class="text-2xl font-bold text-base-900 dark:text-white">45+ apps</div>
+            <div class="text-xs text-base-500 dark:text-base-400">Dans Zoho One</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-base-900 dark:text-white">UTC-4</div>
+            <div class="text-xs text-base-500 dark:text-base-400">Support local Antilles</div>
           </div>
         </div>
       </div>
+
+      <!-- Right Column: Visual Portrait with Microstudio Frame -->
+      <div class="lg:col-span-5 relative" data-aos="fade-left">
+        <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden border border-base-200 dark:border-base-800 bg-white dark:bg-base-900/60 p-3 shadow-xl">
+          <div class="overflow-hidden rounded-2xl">
+            <Image
+              src={portrait}
+              alt="Jean-Christophe Hutin — Agent Zoho & CDO LES4H"
+              width={480}
+              height={560}
+              loading="eager"
+              class="aspect-4/5 w-full object-cover object-top filter grayscale contrast-105 transition-all duration-500 hover:grayscale-0 hover:scale-105"
+            />
+          </div>
+          <!-- Card Footer Details -->
+          <div class="mt-4 px-2 pb-1 flex items-center justify-between text-xs">
+            <div>
+              <div class="font-semibold text-base-900 dark:text-white">Jean-Christophe Hutin</div>
+              <div class="text-base-500 dark:text-base-400">Agent Zoho & Fondateur LES4H</div>
+            </div>
+            <a
+              href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent("Bonjour Jean-Christophe, je souhaite échanger sur Zoho.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-3 py-1 font-semibold text-emerald-800 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-900 transition"
+              title="Discuter directement sur WhatsApp"
+            >
+              <span class="size-1.5 rounded-full bg-emerald-500"></span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-

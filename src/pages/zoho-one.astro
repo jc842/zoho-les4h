@@ -10,34 +10,34 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
 <BaseLayout title={pageTitle} description={pageDesc} canonical="https://zoho.les4h.fr/zoho-one/">
   
   <!-- Hero Section Zoho One -->
-  <section class="py-16 lg:py-24 relative overflow-hidden">
-    <div class="pointer-events-none absolute -top-40 -right-40 size-[500px] rounded-full bg-accent-500/10 blur-3xl"></div>
+  <section class="py-16 lg:py-24 relative overflow-hidden border-b border-base-200 dark:border-base-900/60 bg-gradient-to-b from-white via-base-50/50 to-white dark:from-base-950 dark:via-base-900/30 dark:to-base-950">
+    <div class="pointer-events-none absolute -top-40 -right-40 size-[500px] rounded-full bg-emerald-500/10 blur-3xl"></div>
 
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="max-w-3xl" data-aos="fade-up">
-        <div class="inline-flex items-center gap-2 rounded-full border border-accent-200 bg-accent-50/70 px-3.5 py-1 text-xs font-semibold text-accent-800 dark:border-accent-900 dark:bg-accent-950/70 dark:text-accent-300">
+        <div class="inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 ring-1 ring-emerald-500/30">
           <span>{ZOHO_ONE_DETAILS.badge}</span>
         </div>
 
-        <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-base-950 sm:text-5xl dark:text-white leading-[1.15]">
+        <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-base-900 dark:text-white leading-[1.15]">
           {ZOHO_ONE_DETAILS.headline}
         </h1>
 
-        <p class="mt-6 text-lg text-base-600 dark:text-base-300 leading-relaxed">
+        <p class="mt-5 text-base sm:text-lg text-base-600 dark:text-base-300 leading-relaxed">
           {ZOHO_ONE_DETAILS.subheadline}
         </p>
 
         <div class="mt-8 flex flex-wrap items-center gap-4">
           <a
             href="/contact"
-            class="inline-flex items-center justify-center rounded-xl bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-accent-700 transition-colors"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-base-900 hover:bg-black dark:bg-white dark:text-base-950 dark:hover:bg-zinc-200 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:scale-[1.02]"
           >
             <span>Planifier mon audit Zoho One</span>
-            <span class="ml-2">→</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
           <a
             href={`tel:${CONTACT.phoneE164}`}
-            class="inline-flex items-center justify-center rounded-xl border border-base-300 bg-transparent px-5 py-3.5 text-sm font-medium text-base-700 hover:bg-base-100 dark:border-base-700 dark:text-base-300 dark:hover:bg-base-800 transition-colors"
+            class="inline-flex items-center justify-center rounded-full border border-base-300 dark:border-base-800 bg-white/80 dark:bg-base-900/60 hover:bg-base-100 dark:hover:bg-base-800 px-6 py-3.5 text-sm font-medium text-base-900 dark:text-white transition duration-200"
           >
             Échanger avec un expert local
           </a>
@@ -47,40 +47,43 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
   </section>
 
   <!-- Pricing Models Section -->
-  <section class="py-16 border-t border-base-200 bg-base-50/50 dark:border-base-800 dark:bg-base-950/50">
+  <section class="py-20 border-b border-base-200/80 bg-base-50/50 dark:border-base-900/60 dark:bg-base-950">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
-        <h2 class="text-3xl font-extrabold tracking-tight text-base-950 dark:text-white">
+      <div class="max-w-2xl" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-widest font-bold text-emerald-600 dark:text-emerald-400">
+          Tarification officielle Zoho
+        </span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-base-900 dark:text-white">
           Une tarification limpide et sans surprise
         </h2>
-        <p class="mt-3 text-sm text-base-600 dark:text-base-400">
+        <p class="mt-3 text-base text-base-600 dark:text-base-300">
           Deux formules souples pour s'adapter à la taille de votre équipe et à votre modèle opérationnel aux Antilles.
         </p>
       </div>
 
-      <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2 max-w-5xl mx-auto">
+      <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2 max-w-5xl">
         {ZOHO_ONE_DETAILS.pricingModels.map((plan) => (
-          <div class={`relative flex flex-col justify-between rounded-3xl border p-8 shadow-sm ${
+          <div class={`relative flex flex-col justify-between rounded-3xl border p-8 transition-all duration-300 hover:shadow-xl ${
             plan.popular
-              ? "border-accent-500 bg-white ring-2 ring-accent-500/20 dark:bg-base-900"
-              : "border-base-200 bg-white dark:border-base-800 dark:bg-base-900"
+              ? "border-emerald-500/50 bg-white dark:bg-base-900 shadow-md ring-1 ring-emerald-500/20"
+              : "border-base-200 dark:border-base-800 bg-white dark:bg-base-900/60 hover:border-emerald-500/40"
           }`}>
             {plan.popular && (
-              <span class="absolute -top-3.5 left-8 rounded-full bg-accent-600 px-3 py-1 text-xs font-semibold text-white shadow-md">
+              <span class="absolute -top-3.5 left-8 rounded-full bg-emerald-700 px-3.5 py-1 text-xs font-bold text-white shadow-md">
                 Recommandé pour 90% des TPE/PME
               </span>
             )}
 
             <div>
-              <h3 class="text-xl font-bold text-base-950 dark:text-white">
+              <h3 class="text-xl font-bold text-base-900 dark:text-white">
                 {plan.name}
               </h3>
               <p class="mt-2 text-xs text-base-600 dark:text-base-400">
                 {plan.desc}
               </p>
 
-              <div class="mt-6 flex items-baseline gap-2">
-                <span class="text-4xl font-extrabold text-base-950 dark:text-white font-mono">
+              <div class="mt-6 flex items-baseline gap-2 pb-6 border-b border-base-100 dark:border-base-800">
+                <span class="text-4xl font-extrabold text-base-900 dark:text-white font-mono">
                   {plan.pricePerMonth}
                 </span>
                 <span class="text-xs text-base-500">
@@ -88,10 +91,10 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
                 </span>
               </div>
 
-              <ul class="mt-8 space-y-3 text-xs text-base-600 dark:text-base-300">
+              <ul class="mt-6 space-y-3 text-xs text-base-600 dark:text-base-300">
                 {plan.highlights.map((h) => (
                   <li class="flex items-center gap-2.5">
-                    <svg class="size-4 text-emerald-500 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <svg class="size-4 text-emerald-600 dark:text-emerald-400 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                     </svg>
                     <span>{h}</span>
@@ -103,13 +106,13 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
             <div class="mt-8 pt-6 border-t border-base-100 dark:border-base-800">
               <a
                 href="/contact"
-                class={`block w-full rounded-xl py-3 text-center text-xs font-semibold transition-colors ${
+                class={`block w-full rounded-full py-3 text-center text-xs font-bold transition-colors ${
                   plan.popular
-                    ? "bg-accent-600 text-white hover:bg-accent-700 shadow-md"
+                    ? "bg-emerald-700 text-white hover:bg-emerald-800 shadow-xs hover:scale-[1.02]"
                     : "border border-base-300 text-base-800 hover:bg-base-100 dark:border-base-700 dark:text-base-200 dark:hover:bg-base-800"
                 }`}
               >
-                {plan.ctaText} →
+                {plan.ctaText} &rarr;
               </a>
             </div>
           </div>
@@ -119,21 +122,24 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
   </section>
 
   <!-- Complete Apps Ecosystem inside Zoho One -->
-  <section class="py-20">
+  <section class="py-20 border-b border-base-200 dark:border-base-900/60 bg-white dark:bg-base-950">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-extrabold tracking-tight text-base-950 sm:text-4xl dark:text-white">
+      <div class="max-w-2xl" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-widest font-bold text-emerald-600 dark:text-emerald-400">
+          Suite applicative
+        </span>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-base-900 dark:text-white">
           Ce que comprend votre abonnement Zoho One
         </h2>
-        <p class="mt-4 text-sm text-base-600 dark:text-base-400">
+        <p class="mt-3 text-base text-base-600 dark:text-base-300">
           Chaque application est un outil professionnel complet qui communique nativement avec tous les autres.
         </p>
       </div>
 
-      <div class="mt-16 space-y-12">
+      <div class="mt-14 space-y-12">
         {ZOHO_CATEGORIES.map((cat) => (
-          <div class="rounded-3xl border border-base-200 bg-white p-8 dark:border-base-800 dark:bg-base-900 shadow-sm">
-            <h3 class="text-xl font-bold text-base-950 dark:text-white">
+          <div class="rounded-3xl border border-base-200 dark:border-base-800 bg-white dark:bg-base-900/60 p-8 shadow-sm">
+            <h3 class="text-xl font-bold text-base-900 dark:text-white">
               {cat.name}
             </h3>
             <p class="text-xs text-base-500 mt-1">
@@ -143,10 +149,10 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
             <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {cat.apps.map((app) => (
                 <div class="rounded-2xl border border-base-100 bg-base-50/60 p-4 dark:border-base-800 dark:bg-base-950/60">
-                  <div class="font-bold text-sm text-base-950 dark:text-white">
+                  <div class="font-bold text-sm text-base-900 dark:text-white">
                     {app.name}
                   </div>
-                  <div class="mt-1 text-xs font-medium text-accent-600 dark:text-accent-400">
+                  <div class="mt-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400">
                     {app.tagline}
                   </div>
                   <p class="mt-2 text-[11px] text-base-600 dark:text-base-400 leading-snug">
@@ -173,13 +179,13 @@ const pageDesc = "Découvrez Zoho One en Guadeloupe, Martinique, Guyane et Saint
       <div class="mt-8 flex justify-center gap-4">
         <a
           href="/contact"
-          class="rounded-xl bg-accent-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-accent-400 transition-colors"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-600 hover:bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:scale-[1.02]"
         >
-          Demander une démonstration interactive
+          <span>Demander une démonstration interactive</span>
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
 </BaseLayout>
-

@@ -16,25 +16,25 @@ const currentYear = new Date().getFullYear();
           L'expertise locale pour structurer, automatiser et rentabiliser votre entreprise sur le fuseau Caraïbes (UTC-4).
         </p>
 
-        <div class="mt-6 flex flex-col gap-2 text-sm text-base-600 dark:text-base-400">
+        <div class="mt-6 flex flex-col gap-2.5 text-sm text-base-600 dark:text-base-400">
           <div class="flex items-center gap-2">
-            <svg class="size-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="size-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <a href={`tel:${CONTACT.phoneE164}`} class="hover:text-accent-500 transition-colors">
+            <a href={`tel:${CONTACT.phoneE164}`} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">
               {CONTACT.phoneDisplay}
             </a>
           </div>
           <div class="flex items-center gap-2">
-            <svg class="size-4 text-accent-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="size-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg>
-            <a href={`mailto:${CONTACT.email}`} class="hover:text-accent-500 transition-colors">
+            <a href={`mailto:${CONTACT.email}`} class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-medium">
               {CONTACT.email}
             </a>
           </div>
-          <div class="flex items-center gap-2 text-xs text-base-500">
+          <div class="flex items-center gap-2 text-xs text-base-500 pt-1">
             <span class="inline-block size-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>Support de proximité actif · Fuseau horaire UTC-4</span>
           </div>
@@ -43,32 +43,32 @@ const currentYear = new Date().getFullYear();
 
       <!-- Col 2: Solutions Zoho -->
       <div>
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-base-900 dark:text-white">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-base-900 dark:text-white">
           Solutions Zoho
         </h3>
         <ul class="mt-4 space-y-2.5 text-sm text-base-600 dark:text-base-400">
           <li>
-            <a href="/zoho-one" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/zoho-one" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Zoho One (ERP 45+ apps)
             </a>
           </li>
           <li>
-            <a href="/zoho-crm" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/zoho-crm" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Zoho CRM & Bigin
             </a>
           </li>
           <li>
-            <a href="/#finance" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/#finance" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Facturation & TVA locale (Books)
             </a>
           </li>
           <li>
-            <a href="/#operations" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/#operations" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Signature électronique (Sign)
             </a>
           </li>
           <li>
-            <a href="/#marketing" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/#marketing" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Marketing & Campagnes
             </a>
           </li>
@@ -77,33 +77,33 @@ const currentYear = new Date().getFullYear();
 
       <!-- Col 3: Par Métier / Audience -->
       <div>
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-base-900 dark:text-white">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-base-900 dark:text-white">
           Par Métier aux Antilles
         </h3>
         <ul class="mt-4 space-y-2.5 text-sm text-base-600 dark:text-base-400">
           <li>
-            <a href="/audiences#retail-distribution" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/audiences#retail-distribution" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Commerce & Import-Export
             </a>
           </li>
           <li>
-            <a href="/audiences#services-consulting" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/audiences#services-consulting" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Sociétés de Services & Conseil
             </a>
           </li>
           <li>
-            <a href="/audiences#tourism-hospitality" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/audiences#tourism-hospitality" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               Tourisme & Hébergement
             </a>
           </li>
           <li>
-            <a href="/audiences#construction-field-services" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors">
+            <a href="/audiences#construction-field-services" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               BTP, Artisans & Terrain
             </a>
           </li>
           <li>
-            <a href="/contact" class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors font-medium text-accent-600 dark:text-accent-400">
-              Audit 30 min offert →
+            <a href="/contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors font-bold text-emerald-700 dark:text-emerald-400">
+              Audit 30 min offert &rarr;
             </a>
           </li>
         </ul>
@@ -111,7 +111,7 @@ const currentYear = new Date().getFullYear();
 
       <!-- Col 4: Écosystème LES4H -->
       <div>
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-base-900 dark:text-white">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-base-900 dark:text-white">
           Groupe LES4H
         </h3>
         <ul class="mt-4 space-y-2.5 text-sm text-base-600 dark:text-base-400">
@@ -121,7 +121,7 @@ const currentYear = new Date().getFullYear();
                 href={sub.href}
                 target="_blank"
                 rel="noopener"
-                class="hover:text-accent-500 dark:hover:text-accent-400 transition-colors inline-flex items-center gap-1"
+                class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors inline-flex items-center gap-1"
               >
                 <span>{sub.label}</span>
                 <svg class="size-3 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -153,4 +153,3 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
 </footer>
-

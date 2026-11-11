@@ -27,33 +27,33 @@ const faqs = [
 ];
 ---
 
-<section id="faq" class="py-24">
+<section id="faq" class="py-24 border-b border-base-200 dark:border-base-900/60 bg-white dark:bg-base-950">
   <div class="mx-auto max-w-5xl px-6 lg:px-8">
     
-    <div class="text-center" data-aos="fade-up">
-      <span class="font-mono text-xs font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400">
+    <div class="max-w-2xl" data-aos="fade-up">
+      <span class="text-xs uppercase tracking-widest font-bold text-emerald-600 dark:text-emerald-400">
         Foire aux questions
       </span>
-      <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-base-950 sm:text-4xl dark:text-white">
+      <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-base-900 dark:text-white">
         Questions fréquentes sur les solutions Zoho aux Antilles
       </h2>
-      <p class="mt-4 text-base text-base-600 dark:text-base-400">
+      <p class="mt-3 text-base text-base-600 dark:text-base-300">
         Tout ce que vous devez savoir avant de digitaliser ou restructurer vos outils d'entreprise.
       </p>
     </div>
 
-    <div class="mt-14 space-y-4" data-aos="fade-up">
-      {faqs.map((faq, idx) => (
-        <details class="group rounded-2xl border border-base-200 bg-white p-6 dark:border-base-800 dark:bg-base-900 transition-all [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-base-950 dark:text-white text-base">
+    <div class="mt-12 space-y-4" data-aos="fade-up">
+      {faqs.map((faq) => (
+        <details class="group rounded-3xl border border-base-200 dark:border-base-800 bg-white dark:bg-base-900/60 p-6 sm:p-7 transition-all [&_summary::-webkit-details-marker]:hidden hover:border-emerald-500/40">
+          <summary class="flex cursor-pointer items-center justify-between font-bold text-base-900 dark:text-white text-base">
             <span>{faq.q}</span>
-            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-180 text-accent-600 dark:text-accent-400">
+            <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-180 text-emerald-700 dark:text-emerald-400">
               <svg class="size-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
               </svg>
             </span>
           </summary>
-          <p class="mt-4 text-sm leading-relaxed text-base-600 dark:text-base-300 pt-3 border-t border-base-100 dark:border-base-800">
+          <p class="mt-4 text-sm leading-relaxed text-base-600 dark:text-base-300 pt-4 border-t border-base-100 dark:border-base-800">
             {faq.a}
           </p>
         </details>
@@ -61,13 +61,12 @@ const faqs = [
     </div>
 
     <!-- Still have questions? -->
-    <div class="mt-12 text-center text-sm text-base-500">
+    <div class="mt-12 text-sm text-base-500">
       <span>Une question spécifique sur votre entreprise ? </span>
-      <a href="/contact" class="font-semibold text-accent-600 dark:text-accent-400 hover:underline">
-        Posez-la directement à notre expert →
+      <a href="/contact" class="font-bold text-emerald-700 dark:text-emerald-400 hover:underline">
+        Posez-la directement à notre expert &rarr;
       </a>
     </div>
 
   </div>
 </section>
-
